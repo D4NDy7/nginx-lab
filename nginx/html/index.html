@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGINX Lab — DevOps Infrastructure</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; padding: 3rem 1rem; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 2.2rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.5rem; }
+    .subtitle { color: #94a3b8; margin-bottom: 2.5rem; font-size: 1.05rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.2rem; }
+    .card h3 { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .card a { display: block; color: #38bdf8; text-decoration: none; margin: 0.2rem 0; font-size: 0.95rem; }
+    .card a:hover { color: #7dd3fc; }
+    .badge { display: inline-block; background: #0369a1; color: #e0f2fe; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 4px; margin-left: 0.4rem; }
+    .status { display: flex; align-items: center; gap: 0.5rem; color: #4ade80; font-size: 0.9rem; margin-top: 2rem; }
+    .dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 NGINX Lab</h1>
+    <p class="subtitle">Практикум по конфигурированию веб-сервера и сетевой инфраструктуры</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Backend API</h3>
+        <a href="http://api.localhost/api/v1/info">API v1 /info <span class="badge">blue</span></a>
+        <a href="http://api.localhost/api/v2/info">API v2 /info <span class="badge">green</span></a>
+        <a href="http://api.localhost/api/lb/info">Load Balanced /lb</a>
+        <a href="http://api.localhost/api/cached/info">Cached /cached</a>
+        <a href="http://api.localhost/api/sticky/info">Sticky /sticky</a>
+      </div>
+      <div class="card">
+        <h3>HTTPS & Security</h3>
+        <a href="https://localhost/">HTTPS ← localhost</a>
+        <a href="http://secure.localhost/api/v1/info">Rate Limited API</a>
+        <a href="http://secure.localhost/auth">Auth Endpoint</a>
+        <a href="http://secure.localhost/admin">Admin (ACL)</a>
+        <a href="http://secure.localhost/private">Private (Basic Auth)</a>
+      </div>
+      <div class="card">
+        <h3>Monitoring</h3>
+        <a href="/nginx_status">NGINX Status</a>
+        <a href="http://localhost:9090">Prometheus</a>
+        <a href="http://localhost:9113/metrics">NGINX Exporter</a>
+      </div>
+      <div class="card">
+        <h3>WebSocket</h3>
+        <a href="http://ws.localhost/">WS Server</a>
+      </div>
+    </div>
+    <div class="status">
+      <div class="dot"></div>
+      NGINX 1.25 running · All systems operational
+    </div>
+  </div>
+</body>
+</html>

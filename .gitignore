@@ -1,0 +1,30 @@
+# Python
+*.pyc
+__pycache__/
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+access.log
+
+# SSL — не коммитим приватный ключ в реальных проектах
+# nginx/ssl/key.pem
+# nginx/ssl/cert.pem
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Архив сдачи
+*.tar.gz
